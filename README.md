@@ -13,6 +13,10 @@
 >    1. [Longer Gadgets](#longergadgets)
 >    1. [Pop Gadgets](#popgadgets)
 >    1. [Jump Gadgets](#jumpgadgets)
+> 1. [Testing Environment](#testing)
+>    1. [Configuration](#configuration)
+>    1. [Prerequisites](#prerequisites)
+>    1. [Example Usage](#exampleusage)
 
 <a name="introduction"></a>
 ## Introduction
@@ -191,13 +195,15 @@ Finally, one feature I was not planning on implementing, but I know would have b
 <br>
 Even though most of these missing features would require a lot of work, I believe my current implementation and the Action and MemoryState representations are generic enough to make the job slightly easier. In fact I was planning on adding most of these features before I realized how much work I was putting into it, so the core of the code was made with these features in mind.
 
-
+<a name="testing"></a>
 # Testing Environment
+<a name="configuration"></a>
 ### Configuration
 I tested my program on a 64-bit Ubuntu Virtual Machine. In order for Return Oriented Attacks to work on a buffer overflow vulnerable program, ASLR must be disabled on the machine by running 
 
 ```echo 0 | sudo tee /proc/sys/kernel/randomize_va_space```
 
+<a name="prerequisites"></a>
 ### Prerequisites
 This program requires the `pwntools` library to work. On an ubuntu machine, and based on the instructions given on `pwntools`' <a href="http://docs.pwntools.com/en/stable/install.html">documentation</a>, run the following commands to install `pwntools`:
 
@@ -213,6 +219,7 @@ $ pip install --upgrade pip
 $ pip install --upgrade pwntools
 ```
 
+<a name="exampleusage"></a>
 ### Example usage
 This repo contains a simple `test.c` program that is vulnerable to a buffer-overflow attack, along with a `Makefile` that will allow you to compile it into a binary called `teststatic` using `make`. It also contains a very, very simple sequence of instructions in `input.txt` as well as a set of bytes to avoid in `avoid.txt`. In order to attack this binary, an example command would be the following:
 
