@@ -234,3 +234,11 @@ Where I assume the padding has been determined to be 76 using a tool like `gdb` 
 ```
 
 Although the gadgets found by `ropgen.py` will be executed correctly, which can be verified using `gdb`, the sample code provided in `input.txt` will not achieve anything, and is only intended to be a proof of concept. More complex sequences of instructions might be possible on larger binaries.
+
+
+<br>
+<br>
+
+The following provides a Virtual Machine tested with VirtualBox that is already configured to be able to run this program. The username is `olemer2` and the password is `password`, although it should not be needed. The entire code should already be present under `/project/ROPGen/`.
+
+<a href="https://drive.google.com/drive/folders/17wjcMwMrLc4g4OUvu9XaD4I2dPRaw4Al?usp=sharing">https://drive.google.com/drive/folders/17wjcMwMrLc4g4OUvu9XaD4I2dPRaw4Al?usp=sharing</a>
