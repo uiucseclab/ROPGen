@@ -1,0 +1,4 @@
+.rop_cache
+*.pyc
+red86/*.pyc
+teststatic
